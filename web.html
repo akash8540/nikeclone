@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: white;
+            font-family: "Inter", sans-serif;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+
+        }
+
+        .nav {
+            position: relative;
+            /* background-color: aqua; */
+
+        }
+
+        .nav img {
+            height: 28px;
+            width: 100px;
+            margin-top: 12px;
+            margin-right: 300px;
+            margin-left: 10px;
+        }
+
+        .nav ul {
+            display: flex;
+
+        }
+
+        .nav ul li {
+            display: inline-block;
+            list-style-type: none;
+            color: black;
+            margin-top: 12px;
+            margin-right: 40px;
+            position: relative;
+
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .nav ul li a::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(73, 71, 71);
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -3px;
+            border-radius: 10px;
+        }
+
+        .nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .icon {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .icon i {
+            font-size: 25px;
+            font-weight: 40px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        /* search button styling */
+        .boxsearch {
+            min-width: 180px;
+            /* background-color:none; */
+
+        }
+
+        .boxsearch .searchbox {
+            position: relative;
+            height: 40px;
+            max-width: 180px;
+            /* background-color: #19127a; */
+            margin: auto;
+            margin-top: 8px;
+            box-shadow: 0 2px 2px 0 rgb(170, 167, 167);
+            border-radius: 25px;
+
+
+        }
+
+        .searchbox input {
+            position: absolute;
+            height: 90%;
+            width: 90%;
+            margin-top: 3px;
+            border-radius: 25px;
+            /* background: yellow; */
+            outline: none;
+            border: none;
+            padding-left: 20px;
+            font-size: 15px;
+
+        }
+
+        .searchbox .icon2 {
+            position: absolute;
+            right: -2px;
+            top: 0;
+            margin-top: 1.5px;
+            height: 90%;
+            width: 30px;
+            margin-right: 20px;
+            margin-bottom: 5px;
+            /* background: #ff6760; */
+            text-align: center;
+            line-height: 40px;
+            color: rgb(128, 121, 121);
+
+        }
+
+        .right {
+            height: 380px;
+            width: 28%;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 70PX;
+            /* background-color: red; */
+            font-size: 25px;
+        }
+
+        .right button {
+            display: inline;
+            height: 30px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            border: 0cap;
+            border-radius: 10px;
+        }
+
+        .right button:hover {
+            background-color: rgb(133, 126, 126);
+        }
+
+        .right p {
+            font-size: large;
+            font-stretch: normal;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            justify-content: center;
+        }
+
+        .box1 {
+            margin-top: 70px;
+            height: 22%;
+            width: 17%;
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 150px;
+            box-shadow: 2px 2px 2px 2px rgb(170, 167, 167);
+            font-weight: 15;
+            display: inline-block;
+            background-color: rgb(240, 240, 240);
+            color: rgb(34, 33, 33);
+        }
+
+        .box2 {
+            height: 22%;
+            width: 17%;
+            color: rgb(34, 33, 33);
+            background-color: rgb(240, 240, 240);
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 10px;
+            box-shadow: 2px 2px 2px 2px rgb(170, 167, 167);
+            font-weight: 15;
+            display: inline-block;
+        }
+
+        .box3 {
+            height: 22%;
+            width: 17%;
+            color: rgb(34, 33, 33);
+            background-color: rgb(240, 240, 240);
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 10px;
+            box-shadow: 2px 2px 2px 2px rgb(170, 167, 167);
+            font-weight: 15;
+            display: inline-block;
+        }
+        .box1:hover{
+            background-color: rgb(184, 178, 178);
+        }
+        .box2:hover{
+            background-color: rgb(182, 176, 176);
+        }
+        .box3:hover{
+            background-color: rgb(175, 169, 169);
+        }
+        
+
+        .box1 p {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .box2 p {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .box3 p {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .checked {
+            margin: 2px;
+            margin-bottom: 20px;
+            color: #ff9f46;
+        }
+
+        .footer {
+            height: 350px;
+            background-color: rgb(240, 240, 240);
+            color: rgb(56, 54, 54);
+        }
+
+        .navfooter1 {
+            display: flex;
+            text-decoration: none;
+
+        }
+
+        .navfooter1 a {
+            font-size: large;
+            font-weight: bolder;
+            margin-right: 100px;
+            margin-top: 13px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
+            margin-left: 20px;
+        }
+
+        .navfooter1 a p {
+            margin-top: 18px;
+            font-size: 15px;
+        }
+
+        .navfooter1 a p:hover {
+            color: rgb(133, 126, 126);
+        }
+
+        #globe {
+            font-size: 15px;
+            margin-left: 380px;
+        }
+
+        .end {
+            display: inline-flex;
+            width: 100%;
+            height: 20px;
+            font-size: 15px;
+            font-weight: 20px;
+            margin-left: 25px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        .end p {
+            margin-right: 70px;
+        }
+        .end p:hover{
+            color: #7F7F7F;
+        }
+
+        .nav1 img {
+            height: 30px;
+            width: 32px;
+            margin-top: 3px;
+            margin-left: 28px;
+            margin-right: 1040px;
+        }
+
+        .nav1 {
+            height: 35px;
+            background-color: rgb(240, 240, 240);
+            display: flex;
+        }
+
+        .nav1 ul li {
+            display: inline-flex;
+            list-style-type: none;
+            font-size: 14px;
+            color: black;
+            margin-top: 10px;
+            margin-left: 5px;
+            position: relative;
+        }
+
+        .nav1 ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 42px;
+            position: relative;
+        }
+
+        .nav1 ul li a::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(73, 71, 71);
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -1px;
+            border-radius: 20px;
+
+        }
+
+        .nav1 ul li a:hover:after {
+            width: 100%;
+        }
+
+        .iconlast i {
+            margin: 10px;
+        }
+
+
+        /* scrollbar section */
+        .sidebar header h3 {
+            position: sticky;
+            margin-bottom: 15px;
+            margin-left: 40PX;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #7F7F7F;
+            border-radius: 7px;
+
+        }
+
+        hr {
+            color: whitesmoke;
+        }
+
+        .sidebar {
+            height: 612px;
+            width: 300px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .scrollbox {
+            overflow: auto;
+        }
+
+        .scrollbox-inner a {
+            text-decoration: none;
+            color: black;
+            display: list-item;
+            font-weight: bold;
+            margin-left: 15px;
+            list-style-type: none;
+            margin: 25px;
+            margin-bottom: 15px;
+        }
+
+        .scrollbox-inner a:hover {
+            color: rgb(133, 126, 126);
+        }
+
+        #hr {
+            width: 90%;
+            color: aliceblue;
+            visibility: 0.2em;
+        }
+
+        /* boxes section */
+        .boxesforside {
+            /* background-color: rgb(15, 115, 161); */
+            margin-left: 15px;
+
+        }
+
+        .boxesforside h5{
+            color: #0f0f0f;
+            margin-left: 790px;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .boxesforside h5 i {
+            margin-right: 15px;
+        }
+
+        .boxes {
+            height: 280px;
+            width: 17%;
+            background-color: rgb(240, 240, 240);
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 15px;
+            box-shadow: 2px 2px 2px 2px rgb(170, 167, 167);
+            font-weight: 15;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .boxes img {
+            height: 150px;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .boxes:hover {
+            background-color: #afa6a6;
+        }
+
+        /* grid styling */
+        .grid {
+            display: grid;
+            height: 600px;
+            width: 100%px;
+            /* background-color: red; */
+            /* grid-row-gap:5px; */
+            /* grid-column-gap: 5px; */
+            grid-template-columns: auto auto;
+            /* grid-template-rows: auto auto; */
+        }
+
+        .grid1 {
+            height: 600px;
+            width: 300px;
+            /* background-color: green; */
+        }
+
+        .grid2 {
+            height: 612px;
+            width: 1100px;
+            /* background-color: yellow; */
+        }
+        footer{
+            margin-top: 25px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <head>
+            <div class="nav1">
+                <img src="jordanlogo.png" alt="">
+                <ul>
+                    <li><a href="">Find A Store</a></li>
+                    <li> <a href="">Help</a></li>
+                    <li><a href="">Join Us</a></li>
+                    <li><a href="signinpage.html">Sing In</a></li>
+                </ul>
+            </div>
+        </head>
+        <header>
+            <div class="class">
+                <div class="nav">
+                    <ul>
+                        <img src="nikesign.png" alt="">
+                        <li> <a href="">Home</a></li>
+                        <li> <a href="">Men</a></li>
+                        <li><a href="">Women</a></li>
+                        <li><a href="">Kids</a></li>
+                        <li> <a href="">Sale</a></li>
+                        <li><a href="">Customize</a></li>
+                        <div class="icon">
+                            <div class="boxsearch">
+                                <div class="searchbox">
+                                    <input type="search" placeholder="Search">
+                                    <a href="">
+                                        <label for="" class="icon2">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                    </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="iconlast">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                        </div>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="right">
+                <h4>Explore Limited Edition</h4>
+                <h1>NIKE LIMITED</h1>
+                <h1>EDITION</h1>
+                <P>Unlesh The extraoronary Elevate your game with nike`s Limited Edition Where Innovation meets
+                    style, leaving a lasting mark, just do it. </P>
+                <button>Shop Now</button>
+            </div>
+            <div class="box1">
+                <img src="s1.png">
+                <h3>Men air jordan</h3>
+                <p>A shoe is an item of footwear intended to protect and comfort</p>
+                <h4>$100.00</h4>
+                <ul>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star "></li>
+                </ul>
+            </div>
+            <div class="box2">
+                <img src="s2.png">
+                <h3> Nike shoes</h3>
+                <p>A shoe is an item of footwear intended to protect and comfort</p>
+                <h4>$150.00</h4>
+                <ul>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star "></li>
+                </ul>
+            </div>
+            <div class="box3">
+                <img src="s3.png">
+                <h3>Air jordan</h3>
+                <p>A shoe is an item of footwear intended to protect and comfort</p>
+                <h4>$200.00</h4>
+                <ul>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star checked"></li>
+                    <li class="fa fa-star "></li>
+                </ul>
+            </div>
+            <!-- scrolbar  section -->
+            <div class="grid">
+                <div class="grid1">
+
+                    <head id="sidebarleftbar">
+                        <nav class="sidebar">
+                            <header>
+                                <h3>Men,s Shoes (1170)</h3>
+                            </header>
+                            <div class="scrollbox">
+                                <div class="scrollbox-inner">
+                                    <a href="">Lifestyle</a>
+                                    <a href="">Jordan</a>
+                                    <a href="">Running</a>
+                                    <a href="">Basketball</a>
+                                    <a href="">Football</a>
+                                    <a href="">Trining & gym</a>
+                                    <a href="">Sketeboarding</a>
+                                    <a href="">Golf</a>
+                                    <a href="">Tennis</a>
+                                    <a href="">Athletic</a>
+                                    <a href="">Walking</a>
+                                    <a href="">Gender v</a>
+                                    <a href="">Sale & offers ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Size ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Colour ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Brand ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Collections ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Airmax ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Sports ˅</a>
+                                    <hr id="hr">
+                                    <a href="" >Men   v</a>
+                                    <hr id="hr">
+                                    <a href="">Women ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Kid ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Country ˅</a>
+                                    <hr id="hr">
+                                    <a href="">XXL ˅</a>
+                                    <hr id="hr">
+                                    <a href="">Clothes ˅</a>
+                                </div>
+                            </div>
+                        </nav>
+                </div>
+                <div class="grid2">
+                    <div class="boxesforside">
+                        <h5>Hide Filter<i class="fa-solid fa-filter"></i>Sort By <i
+                                class="fa-solid fa-angle-down"></i></h5>
+                        <div class="boxes">
+                            <img src="s4.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s5.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s6.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s7.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s8.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s9.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s10.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s11.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s12.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                        <div class="boxes">
+                            <img src="s13.png">
+                            <h3> Nike shoes</h3>
+                            <p>A shoe is an item of footwear intended to protect and comfort</p>
+                            <h4>$150.00</h4>
+                            <ul>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star checked"></li>
+                                <li class="fa fa-star "></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </head>
+            <!-- end -->
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="navfooter1">
+                    <a href="">Resources
+                        <p>Find A Store</p>
+                        <p>Become A Menber</p>
+                        <p>Send Us Feedback</p>
+                    </a>
+                    <a href="" id="Help">Help
+                        <p>Get Help</p>
+                        <p>Order Status</p>
+                        <p>Delevery</p>
+                        <p>Returns</p>
+                        <p>Payment Option</p>
+                        <p>Contact Us Nike.com Inquiries</p>
+                        <p>Contact Us to All Others Inquiries</p>
+                    </a>
+                    <a href="">Company
+                        <p>About Nike</p>
+                        <p>News</p>
+                        <p>Investers</p>
+                        <p>Sustainability</p>
+                    </a>
+                    <a href=""><i class="fa-solid fa-globe" id="globe">India</i></a>
+                </div>
+            </div>
+            <div class="end">
+                <p>Copyright &copy; akash All right reserved
+                <p>
+                <p>Guides ˅</p>
+                <p>Terms of Use</p>
+                <p>Nike privacy policy</p>
+            </div>
+
+        </footer>
+    </body>
+
+</html>
+</body>
+
+</html>
